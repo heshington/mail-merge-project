@@ -9,7 +9,7 @@
 
 with open("./Input/Letters/starting_letter.txt") as file:
     starting_letter = file.read()
-    print(starting_letter)
+
 
 with open("./Input/Names/invited_names.txt") as names:
     n = names.readlines()
@@ -22,4 +22,3 @@ for name in n:
         output.write(f"{new_letter}")
 
 
-print(new_letter)
