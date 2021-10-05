@@ -13,12 +13,13 @@ with open("./Input/Letters/starting_letter.txt") as file:
 
 with open("./Input/Names/invited_names.txt") as names:
     n = names.readlines()
-    print(n)
+
 
 for name in n:
+    name = name.strip("\n")
     new_letter = starting_letter.replace("[name]", name)
-    with open(f"./Output/ReadyToSend/letter_for_{new_letter}.txt", mode="w") as output:
-        output.write(f"./Output/ReadyToSend/letter_for_{new_letter}.txt")
+    with open(f"./Output/ReadyToSend/letter_for_{name}.txt", mode="w") as output:
+        output.write(f"{new_letter}")
 
 
 print(new_letter)
